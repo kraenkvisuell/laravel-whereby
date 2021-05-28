@@ -1,0 +1,54 @@
+{
+    "name": "kraenkvisuell/laravel-whereby",
+    "description": "Laravel wrapper for the Whereby API",
+    "keywords": [
+        "kraenkvisuell",
+        "laravel-whereby"
+    ],
+    "homepage": "https://github.com/kraenkvisuell/laravel-whereby",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Sebastian Hilger",
+            "email": "hilger@kraenk.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kraenkvisuell\\LaravelWhereby\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kraenkvisuell\\LaravelWhereby\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kraenkvisuell\\LaravelWhereby\\LaravelWherebyServiceProvider"
+            ],
+            "aliases": {
+                "LaravelWhereby": "Kraenkvisuell\\LaravelWhereby\\LaravelWherebyFacade"
+            }
+        }
+    }
+}
